@@ -7,10 +7,7 @@ import java.io.*;
 public class StockScraper {
 
     public StockScraper() {
-
-        this.fetchPrice("AMD");
-        this.fetchPrice("AC.TOa");
-
+        System.out.println("Instance created");
     }
 
     public String fetchPrice(String s) {

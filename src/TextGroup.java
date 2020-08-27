@@ -7,10 +7,11 @@ public class TextGroup {
     private JLabel lbl;
     private String s;
 
-    public TextGroup(String s) {
-        txt = new JTextField(20);
+    public TextGroup(String s, String dat) {
+        this.txt = new JTextField("$" + dat, 10);
+        this.txt.setEditable(false);
         lbl = new JLabel(s);
-        lbl.setLabelFor(txt);
+        lbl.setLabelFor(this.txt);
         this.s = s;
     }
 
