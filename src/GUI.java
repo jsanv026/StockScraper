@@ -33,7 +33,6 @@ public class GUI {
         this.newTxt("AMD");
         this.newTxt("AC.TO");
         this.newTxt("AAPL");
-        f.pack();
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setVisible(true);
 
@@ -80,6 +79,7 @@ public class GUI {
         p2.add(tg.getTxt());
         f.remove(p2);
         f.add(p2);
+        f.pack();
     }
 
     private void btnInit() {
@@ -89,7 +89,26 @@ public class GUI {
         {
             public void actionPerformed(ActionEvent e)
             {
-                // display/center the jdialog when the button is pressed
+                if (dataEntry.getText().equals("")){
+                    JOptionPane d = new JOptionPane();
+                    d.showMessageDialog(f, "Error, box cannot be blank");
+                    return;
+                }
+
+                if (!ss.fetchPrice(dataEntry.getText()).equals(null)) {
+                    newTxt(dataEntry.getText());
+                } else {
+                    JOptionPane d = new JOptionPane();
+                    d.showMessageDialog(f , "Unable to find stock, " + dataEntry.getText());
+                }
+
+            }
+        });
+
+        btnRef.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent e)
+            {
                 JDialog d = new JDialog(f, "Hello", true);
                 d.setLocationRelativeTo(f);
                 d.setVisible(true);

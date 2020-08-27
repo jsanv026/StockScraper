@@ -22,6 +22,12 @@ public class StockScraper {
             System.out.println("Unable to find stock, " + s);
         }
 
+        try {
+            double tmp = Double.parseDouble(price);
+        } catch (Exception e){
+            return null;
+        }
+
         return price;
     }
 
