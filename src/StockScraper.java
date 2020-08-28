@@ -6,8 +6,15 @@ import java.io.*;
 
 public class StockScraper {
 
-    public StockScraper() {
+    private static StockScraper inst;
+
+    private StockScraper() {
         System.out.println("Instance created");
+    }
+
+    public static StockScraper getInstance() {
+        if (inst == null) { inst = new StockScraper(); }
+        return inst;
     }
 
     public String fetchPrice(String s) {

@@ -20,6 +20,7 @@ public class TextGroup {
     public JLabel getLbl() { return lbl; }
 
     public void setLabel(String s) { lbl.setText(s); }
+    public void setTxt(String dat) { txt.setText("$" + dat); }
 
 
 

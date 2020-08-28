@@ -2,6 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.time.format.DateTimeFormatter;
+import java.time.LocalDateTime;
 
 public class GUI {
 
@@ -9,20 +11,34 @@ public class GUI {
     private JPanel p1;
     private JPanel p2;
     private JTextField dataEntry;
+    private JTextField time;
     private JLabel lblData;
+    private JLabel timeLbl;
     private JButton btnGo;
     private JButton btnRef;
     private TextGroup[] txtArr = new TextGroup[0];
-    private static StockScraper ss = new StockScraper();
+    private static StockScraper ss = StockScraper.getInstance();
     private int arrCount = 0;
+    private DateTimeFormatter dtf;
+    private LocalDateTime currentTime;
 
     public GUI() {
-        f = new JFrame("StockScraper v0.1");
-        p1 = new JPanel(new GridLayout(2,2));
+        f = new JFrame("StockScraper v1.0");
+        p1 = new JPanel(new GridLayout(3,2));
         dataEntry = new JTextField(10);
+        time = new JTextField(10);
         lblData = new JLabel("Enter stock code");
+        timeLbl = new JLabel("Time");
+
+        dtf = DateTimeFormatter.ofPattern("HH:mm:ss");
+        currentTime = LocalDateTime.now();
+        time.setText(dtf.format(currentTime));
+        time.setEditable(false);
 
         lblData.setLabelFor(dataEntry);
+        timeLbl.setLabelFor(time);
+        p1.add(timeLbl);
+        p1.add(time);
         p1.add(lblData);
         p1.add(dataEntry);
         btnInit();
@@ -108,12 +124,21 @@ public class GUI {
         btnRef.addActionListener(new ActionListener()
         {
             public void actionPerformed(ActionEvent e)
-            {
-                JDialog d = new JDialog(f, "Hello", true);
-                d.setLocationRelativeTo(f);
-                d.setVisible(true);
-            }
+            { refresh(); }
         });
     }
+
+    private void refresh() {
+
+        for (TextGroup elem : txtArr ) { refreshOne(elem); }
+        f.remove(p2);
+        f.add(p2);
+        dtf = DateTimeFormatter.ofPattern("HH:mm:ss");
+        currentTime = LocalDateTime.now();
+        time.setText(dtf.format(currentTime));
+
+    }
+
+    private void refreshOne(TextGroup tg) { tg.setTxt(ss.fetchPrice(tg.getLabelName())); }
 
 }
