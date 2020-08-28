@@ -30,6 +30,10 @@ public class GUI {
         lblData = new JLabel("Enter stock code");
         timeLbl = new JLabel("Time");
 
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.setSize(100,100);
+        f.setVisible(true);
+
         dtf = DateTimeFormatter.ofPattern("HH:mm:ss");
         currentTime = LocalDateTime.now();
         time.setText(dtf.format(currentTime));
@@ -49,8 +53,6 @@ public class GUI {
         this.newTxt("AMD");
         this.newTxt("AC.TO");
         this.newTxt("AAPL");
-        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        f.setVisible(true);
 
     }
 
