@@ -110,7 +110,7 @@ public class GUI {
                     return;
                 }
 
-                if (!ss.fetchPrice(dataEntry.getText()).equals(null)) {
+                if (ss.fetchPrice(dataEntry.getText()) != null) {
                     newTxt(dataEntry.getText());
                 } else {
                     JOptionPane d = new JOptionPane();

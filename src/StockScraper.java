@@ -26,12 +26,15 @@ public class StockScraper {
             price = doc.select("span[data-reactid='32']").first().text();
             System.out.println(s + " - " + price);
         } catch (Exception e) {
+            e.printStackTrace();
             System.out.println("Unable to find stock, " + s);
         }
 
         try {
             double tmp = Double.parseDouble(price);
+            System.out.println(tmp);
         } catch (Exception e){
+            e.printStackTrace();
             return null;
         }
 
