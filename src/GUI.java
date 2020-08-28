@@ -8,14 +8,10 @@ import java.time.LocalDateTime;
 public class GUI {
 
     private JFrame f;
-    private JPanel p1;
-    private JPanel p2;
-    private JTextField dataEntry;
-    private JTextField time;
-    private JLabel lblData;
-    private JLabel timeLbl;
-    private JButton btnGo;
-    private JButton btnRef;
+    private JPanel p1, p2;
+    private JTextField dataEntry, time;
+    private JLabel lblData, timeLbl;
+    private JButton btnGo, btnRef;
     private TextGroup[] txtArr = new TextGroup[0];
     private static StockScraper ss = StockScraper.getInstance();
     private int arrCount = 0;
@@ -90,11 +86,12 @@ public class GUI {
     private void addField(TextGroup tg) {
 
         if (p2 == null) {
-            p2 = new JPanel(new GridLayout(0,2));
+            p2 = new JPanel(new GridLayout(0,3));
         }
 
         p2.add(tg.getLbl());
         p2.add(tg.getTxt());
+        p2.add(tg.getChange());
         f.remove(p2);
         f.add(p2);
         f.pack();
@@ -138,6 +135,16 @@ public class GUI {
         dtf = DateTimeFormatter.ofPattern("HH:mm:ss");
         currentTime = LocalDateTime.now();
         time.setText(dtf.format(currentTime));
+
+    }
+
+    private void printOld() {
+
+        for (TextGroup elem : txtArr) {
+
+
+
+        }
 
     }
 
