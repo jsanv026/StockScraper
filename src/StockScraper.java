@@ -31,8 +31,10 @@ public class StockScraper {
         }
 
         try {
-            double tmp = Double.parseDouble(price);
-            System.out.println(tmp);
+            if (price != null) {
+                double tmp = Double.parseDouble(price);
+                System.out.println(tmp);
+            }
         } catch (Exception e){
             e.printStackTrace();
             return null;
