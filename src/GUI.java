@@ -4,6 +4,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 
 public class GUI {
 
@@ -12,13 +13,16 @@ public class GUI {
     private JTextField dataEntry, time;
     private JLabel lblData, timeLbl;
     private JButton btnGo, btnRef;
-    private TextGroup[] txtArr = new TextGroup[0];
+    private ArrayList<String> names = new ArrayList<>();
+    private ArrayList<TextGroup> txtArr = new ArrayList<>();
     private static StockScraper ss = StockScraper.getInstance();
-    private int arrCount = 0;
+    private int index = 0;
     private DateTimeFormatter dtf;
     private LocalDateTime currentTime;
+    private Data data = new Data();
 
-    public GUI() {
+    public GUI() throws Exception {
+
         f = new JFrame("StockScraper v1.0");
         p1 = new JPanel(new GridLayout(3,2));
         dataEntry = new JTextField(10);
@@ -46,21 +50,23 @@ public class GUI {
         p1.add(btnRef);
         f.add(p1);
         f.setLayout(new FlowLayout());
+
         this.newTxt("AMD");
         this.newTxt("AC.TO");
-        this.newTxt("AAPL");
+        this.newTxt("BB.TO");
+        this.newTxt("GME");
 
     }
 
     public void newTxt(String s) {
+
         TextGroup tmp = new TextGroup(s, ss.fetchPrice(s));
-        if (arrCount == txtArr.length) {
-            arrInc(txtArr);
-            txtArr[arrCount++] = tmp;
-        } else {
-            txtArr[arrCount++] = tmp;
-        }
+        txtArr.add(tmp);
+        names.add(s);
         addField(tmp);
+        try { data.overwrite(names); }
+        catch (Exception exception) {}
+
     }
 
     public boolean editTxt(String o, String n) {
@@ -73,31 +79,50 @@ public class GUI {
         return false;
     }
 
-    private void arrInc(TextGroup[] o) {
-
-        TextGroup[] txtArr = new TextGroup[o.length + 1];
-
-        for (int i = 0 ; i < o.length ; i++) { txtArr[i] = o[i]; }
-
-        this.txtArr = txtArr;
-
-    }
-
     private void addField(TextGroup tg) {
 
-        if (p2 == null) {
-            p2 = new JPanel(new GridLayout(0,3));
-        }
+        JButton btn = new JButton("Delete");
+        btn.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                String s = tg.getLabelName();
+                Component c = p1.getComponent(1);
+                p2.remove(c);
+                System.out.println(index);
+                for (int i = 0 ; i < txtArr.size() ; ++i) {
+                    if (txtArr.get(i) == null) { return; }
+                    else if (s.equals(txtArr.get(i).getLabelName())) {
+                        p2.remove(txtArr.get(i).getLbl());
+                        p2.remove(txtArr.get(i).getTxt());
+                        p2.remove(txtArr.get(i).getChange());
+                        p2.remove(btn);
+                    }
+
+                }
+
+                //refresh();
+                f.remove(p2);
+                f.add(p2);
+                f.pack();
+
+            }
+        });
+
+        index++;
+        if (p2 == null) { p2 = new JPanel(new GridLayout(0,4)); }
 
         p2.add(tg.getLbl());
         p2.add(tg.getTxt());
         p2.add(tg.getChange());
+        p2.add(tg.getChange());
+        p2.add(btn);
         f.remove(p2);
         f.add(p2);
         f.pack();
     }
 
-    private void btnInit() {
+    private void btnInit() throws Exception {
         btnGo = new JButton("Go");
         btnRef = new JButton("Refresh");
         btnGo.addActionListener(new ActionListener()
@@ -111,7 +136,9 @@ public class GUI {
                 }
 
                 if (ss.fetchPrice(dataEntry.getText()) != null) {
-                    newTxt(dataEntry.getText());
+                    try { newTxt(dataEntry.getText()); }
+                    catch (Exception exce) {}
+
                 } else {
                     JOptionPane d = new JOptionPane();
                     d.showMessageDialog(f , "Unable to find stock, " + dataEntry.getText());

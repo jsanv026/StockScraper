@@ -5,8 +5,32 @@
       <artifact name="StockScraper:jar" />
     </artifacts-to-build>
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c881c9b-185c-46f8-8c1d-ac65f68a3e4b" name="Default Changelist" comment="" />
+    <list default="true" id="6c881c9b-185c-46f8-8c1d-ac65f68a3e4b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Data.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/StockScraper_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/StockScraper_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/StockScraper_jar/StockScraper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StockScraper/GUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StockScraper/GUI$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StockScraper/GUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StockScraper/GUI$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StockScraper/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StockScraper/GUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StockScraper/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StockScraper/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StockScraper/StockScraper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StockScraper/StockScraper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StockScraper/TextGroup.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StockScraper/TextGroup.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,7 +56,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -78,55 +102,46 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="325" key="#BuildArtifactsBeforeRunChooser" timestamp="1598621358813">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="760" y="274" key="#Project_Structure" timestamp="1611775849747">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="740" y="325" key="#BuildArtifactsBeforeRunChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1598621358813" />
-    <state x="440" y="94" key="#Project_Structure" timestamp="1598909151704">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="760" y="274" key="#Project_Structure/2560.-349.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1611775849747" />
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1611776086287">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="440" y="94" key="#Project_Structure/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1598909151704" />
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598621384571">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom/2560.-349.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1611776086287" />
+    <state width="2517" height="401" key="GridCell.Tab.0.center" timestamp="1611776086287">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598621384571" />
-    <state x="690" y="304" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1598621273034">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="2517" height="401" key="GridCell.Tab.0.center/2560.-349.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1611776086287" />
+    <state width="2517" height="401" key="GridCell.Tab.0.left" timestamp="1611776086286">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="690" y="304" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1598621273034" />
-    <state x="666" y="262" key="FileChooserDialogImpl" timestamp="1598909149978">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="2517" height="401" key="GridCell.Tab.0.left/2560.-349.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1611776086286" />
+    <state width="2517" height="401" key="GridCell.Tab.0.right" timestamp="1611776086287">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="666" y="262" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1598909149978" />
-    <state x="666" y="262" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1598366209635" />
-    <state width="1340" height="282" key="GridCell.Tab.0.bottom" timestamp="1598909671272">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="2517" height="401" key="GridCell.Tab.0.right/2560.-349.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1611776086287" />
+    <state x="760" y="274" key="SettingsEditor" timestamp="1611776054420">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1340" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1598909671272" />
-    <state width="1877" height="184" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598639327532" />
-    <state width="1340" height="282" key="GridCell.Tab.0.center" timestamp="1598909671272">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="760" y="274" key="SettingsEditor/2560.-349.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1611776054420" />
+    <state x="1097" y="613" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611776361380">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1340" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1598909671272" />
-    <state width="1877" height="184" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598639327531" />
-    <state width="1340" height="282" key="GridCell.Tab.0.left" timestamp="1598909671272">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1340" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1598909671272" />
-    <state width="1877" height="184" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598639327531" />
-    <state width="1340" height="282" key="GridCell.Tab.0.right" timestamp="1598909671272">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1340" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1598909671272" />
-    <state width="1877" height="184" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598639327532" />
-    <state x="186" y="27" key="SettingsEditor" timestamp="1598621280689">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="186" y="27" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1598621280689" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1598621242368">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1598621242368" />
+    <state x="1097" y="613" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/2560.-349.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1611776361380" />
   </component>
 </project>
